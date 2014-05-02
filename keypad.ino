@@ -40,16 +40,22 @@ void keypadEvent(KeypadEvent key){
           manualRelay=false;
         }else if (key == 'A') {
           t.pulse(dosing[0].pinAddr,60000 / dosing[0].mlperminute, LOW);
+          writeLCD(0,1);
         }else if (key == 'B') {
           t.pulse(dosing[1].pinAddr,60000 / dosing[1].mlperminute, LOW);
+          writeLCD(1,1);
         }else if (key == 'C') {
           t.pulse(dosing[2].pinAddr,60000 / dosing[2].mlperminute, LOW);
+          writeLCD(2,1);
         }else if (key == 'D') {
           t.pulse(dosing[3].pinAddr,60000 / dosing[3].mlperminute, LOW);
+          writeLCD(3,1);
         }else if (key == '*') {
           t.pulse(dosing[4].pinAddr,60000 / dosing[3].mlperminute, LOW);
+          writeLCD(4,1);
         }else if (key == '#') {
           t.pulse(dosing[5].pinAddr,60000 / dosing[3].mlperminute, LOW);
+          writeLCD(5,1);
         } 
         break;
         
