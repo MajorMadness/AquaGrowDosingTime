@@ -56,7 +56,10 @@ void setup() {
   lcd.begin(16, 2);
 
   for (int i=0;i<=PUMPCOUNTS;i++){
-    pinMode(dosing[i].pinAddr, OUTPUT);
+    pinMode(dosingPins[i], OUTPUT);
+  }
+  for (int i=0;i<=(sizeof(dosingPins)/sizeof(RELAY1));i++){
+    pinMode(relayPIN[i], OUTPUT);
   }
   inputString.reserve(20);
   

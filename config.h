@@ -26,8 +26,8 @@ const int dosingPins[]={DOSE1,DOSE2,DOSE3,DOSE4};
 // Pumpen Einstellungen
 // Uhrzeit, Aktive, Name, Pin Adresse (von array oben), Status (ignorieren, nur wichtig für Programm), Milliliter per minute, Milliliter pro Dosierungconst 
 PUMP dosing[] = {  
-{get_ts(10,0,0),1,"D1",dosingPins[0],60,5},
-{get_ts(11,0,0),1,"D2",dosingPins[1],60,6},
+{get_ts(10,0,0),0,"D1",dosingPins[0],60,5},
+{get_ts(11,0,0),0,"D2",dosingPins[1],60,6},
 {get_ts(11,25,0),0,"D3",dosingPins[2],60,3},
 {get_ts(11,26,0),0,"D4",dosingPins[3],60,3},
 //{get_ts(11,23,0),0,"D3",dosingPins[2],60,3},

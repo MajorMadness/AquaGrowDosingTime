@@ -5,32 +5,36 @@ void keypadEvent(KeypadEvent key){
     switch (keypad.getState()){
     case PRESSED:
         if (key == '1') {
-          if(digitalRead(relayPIN[0])==true){
-            digitalWrite(relayPIN[0],false);
+          if(digitalRead(relayPIN[0])==HIGH){
+            digitalWrite(relayPIN[0],LOW);
           }else{
-            digitalWrite(relayPIN[0],true);
+            digitalWrite(relayPIN[0],HIGH);
           }
+          Serial.println(digitalRead(relayPIN[0]));
           manualRelay=true;
         }else if (key == '2') {
-          if(digitalRead(relayPIN[1])==true){
-            digitalWrite(relayPIN[1],false);
+          if(digitalRead(relayPIN[1])==HIGH){
+            digitalWrite(relayPIN[1],LOW);
           }else{
-            digitalWrite(relayPIN[1],true);
+            digitalWrite(relayPIN[1],HIGH);
           }
+          Serial.println(digitalRead(relayPIN[1]));
           manualRelay=true;
         }else if (key == '3') {
-          if(digitalRead(relayPIN[2])==true){
-            digitalWrite(relayPIN[2],false);
+          if(digitalRead(relayPIN[2])==HIGH){
+            digitalWrite(relayPIN[2],LOW);
           }else{
-            digitalWrite(relayPIN[2],true);
+            digitalWrite(relayPIN[2],HIGH);
           }
+          Serial.println(digitalRead(relayPIN[2]));
           manualRelay=true;
         }else if (key == '4') {
-          if(digitalRead(relayPIN[3])==true){
-            digitalWrite(relayPIN[3],false);
+          if(digitalRead(relayPIN[3])==HIGH){
+            digitalWrite(relayPIN[3],LOW);
           }else{
-            digitalWrite(relayPIN[3],true);
+            digitalWrite(relayPIN[3],HIGH);
           }
+          Serial.println(digitalRead(relayPIN[3]));
           manualRelay=true;
         }else if (key == '5') {
         }else if (key == '6') {
