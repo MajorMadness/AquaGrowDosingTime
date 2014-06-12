@@ -6,16 +6,16 @@
 
 
   // PIN MAPPING NICHT ÄNDERN!!!
-  #define RELAY1 1
-  #define RELAY2 2
-  #define RELAY3 3
-  #define RELAY4 4
-  #define DOSE6 6      // Dosierpumpe 
-  #define DOSE5 7      // Dosierpumpe 
-  #define DOSE4 8      // Dosierpumpe 
-  #define DOSE3 9      // Dosierpumpe 
-  #define DOSE2 10     // Dosierpumpe 
-  #define DOSE1 11     // Dosierpumpe 
+  #define RELAY1 2
+  #define RELAY2 3
+  #define RELAY3 4
+  #define RELAY4 5
+  #define DOSE6 7      // Dosierpumpe 
+  #define DOSE5 8      // Dosierpumpe 
+  #define DOSE4 9      // Dosierpumpe 
+  #define DOSE3 10      // Dosierpumpe 
+  #define DOSE2 11     // Dosierpumpe 
+  #define DOSE1 12     // Dosierpumpe 
 
 // Größe Vorratsflaschen Dünger in ml
 const int dose_val = 150;
