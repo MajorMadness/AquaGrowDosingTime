@@ -5,45 +5,70 @@ void keypadEvent(KeypadEvent key){
     switch (keypad.getState()){
     case PRESSED:
         if (key == '1') {
+          lcd.setCursor(15,1); 
+          lcd.print(F("M"));
+          manualRelay=true;
+          lcd.setCursor(12,0); 
           if(digitalRead(relayPIN[0])==HIGH){
             digitalWrite(relayPIN[0],LOW);
+            lcd.print(F("X"));
           }else{
             digitalWrite(relayPIN[0],HIGH);
+            lcd.print(F("O"));
           }
           Serial.println(digitalRead(relayPIN[0]));
           manualRelay=true;
         }else if (key == '2') {
+          lcd.setCursor(15,1); 
+          lcd.print(F("M"));
+          manualRelay=true;
+          lcd.setCursor(13,0); 
           if(digitalRead(relayPIN[1])==HIGH){
             digitalWrite(relayPIN[1],LOW);
+            lcd.print(F("X"));
           }else{
             digitalWrite(relayPIN[1],HIGH);
+            lcd.print(F("0"));
           }
           Serial.println(digitalRead(relayPIN[1]));
           manualRelay=true;
         }else if (key == '3') {
+          lcd.setCursor(15,1); 
+          lcd.print(F("M"));
+          manualRelay=true;
+          lcd.setCursor(14,0); 
           if(digitalRead(relayPIN[2])==HIGH){
             digitalWrite(relayPIN[2],LOW);
+            lcd.print(F("X"));
           }else{
             digitalWrite(relayPIN[2],HIGH);
+            lcd.print(F("0"));
           }
           Serial.println(digitalRead(relayPIN[2]));
           manualRelay=true;
         }else if (key == '4') {
+          lcd.setCursor(15,1); 
+          lcd.print(F("M"));
+          manualRelay=true;
+          lcd.setCursor(15,0); 
           if(digitalRead(relayPIN[3])==HIGH){
             digitalWrite(relayPIN[3],LOW);
+            lcd.print(F("X"));
           }else{
             digitalWrite(relayPIN[3],HIGH);
+            lcd.print(F("0"));
           }
           Serial.println(digitalRead(relayPIN[3]));
-          manualRelay=true;
         }else if (key == '5') {
         }else if (key == '6') {
         }else if (key == '7') {
         }else if (key == '8') {
         }else if (key == '9') {
           manualRelay=false;
+          lcd.setCursor(15,1); 
+          lcd.print(F("A"));
         }else if (key == 'A') {
-          t.pulse(dosing[0].pinAddr,60000 / dosing[0].mlperminute, LOW);
+          t.pulse(DOSE1,60000 / dosing[0].mlperminute, LOW);
           writeLCD(0,1);
         }else if (key == 'B') {
           t.pulse(dosing[1].pinAddr,60000 / dosing[1].mlperminute, LOW);

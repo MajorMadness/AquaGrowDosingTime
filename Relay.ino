@@ -4,6 +4,12 @@ void setRelay(){
     
     if(digitalRead(relayPIN[i])!=rState){
       digitalWrite(relayPIN[i],rState);
+      lcd.setCursor(12+i,0); 
+      if(rState==1){
+        lcd.print(F("O"));
+      }else{
+        lcd.print(F("X")); 
+      } 
     }
   }
 }
