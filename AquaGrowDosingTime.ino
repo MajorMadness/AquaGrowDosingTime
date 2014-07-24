@@ -70,16 +70,6 @@ void loop() {
   t.update();
   char key = keypad.getKey();
   
-  if (key) {
-    holdKey = key;
-    Serial.println(key);
-  }
-  if (keypad.getState() == HOLD) {
-      if ((millis() - t_hold) > 100 ) {
-          t_hold = millis();
-          switch_holdKey(&holdKey);
-      }
-   }
   
     if(!manualRelay){
       setRelay();

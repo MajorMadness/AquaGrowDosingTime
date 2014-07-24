@@ -34,10 +34,17 @@ void serialHandler(String input){
     case 3:
       pin= input.substring(2,3).toInt();
       val= input.substring(4,7).toInt();
-      t.pulse(dosing[pin].pinAddr,val*1000 / dosing[pin].mlperminute *60, LOW);
-      Serial.print(F("P "));
-      Serial.print(pin);
-      Serial.print(F(" kalibriert"));
+      if(pin<PUMPCOUNTS){
+        unsigned long time = long(val*1000L);
+        t.pulseImmediate(dosingPins[pin],time, HIGH);
+        Serial.print(F("P "));
+        Serial.print(pin);
+        Serial.print(F(" kalibriert"));
+      }else{
+        Serial.print(F("P "));
+        Serial.print(pin);
+        Serial.print(F(" nicht definiert"));
+      }
       break;
   }
       

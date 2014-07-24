@@ -12,8 +12,7 @@ typedef struct {
     uint32_t time;
     boolean active;
     char name[3];
-    int pinAddr;
-    byte mlperminute;
+    byte pinAddr;
     byte mldosing;
 }PUMP;
 

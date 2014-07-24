@@ -68,24 +68,26 @@ void keypadEvent(KeypadEvent key){
           lcd.setCursor(15,1); 
           lcd.print(F("A"));
         }else if (key == 'A') {
-          t.pulse(DOSE1,60000 / dosing[0].mlperminute, LOW);
+          t.pulse(dosingPins[0],60000 / dosingMlMin[0], LOW);
+//      Serial.print(F("DOSINGA"));
+//      Serial.println(key);
           writeLCD(0,1);
         }else if (key == 'B') {
-          t.pulse(dosing[1].pinAddr,60000 / dosing[1].mlperminute, LOW);
+          t.pulse(dosingPins[1],60000 / dosingMlMin[1], LOW);
           writeLCD(1,1);
         }else if (key == 'C') {
-          t.pulse(dosing[2].pinAddr,60000 / dosing[2].mlperminute, LOW);
+          t.pulse(dosingPins[2],60000 / dosingMlMin[2], LOW);
           writeLCD(2,1);
         }else if (key == 'D') {
-          t.pulse(dosing[3].pinAddr,60000 / dosing[3].mlperminute, LOW);
+          t.pulse(dosingPins[3],60000 / dosingMlMin[3], LOW);
           writeLCD(3,1);
-        }else if (key == '*') {
-          t.pulse(dosing[4].pinAddr,60000 / dosing[3].mlperminute, LOW);
+        }else if (key == '*' && PUMPCOUNTS>4) {
+          t.pulse(dosingPins[4],60000 / dosingMlMin[4], LOW);
           writeLCD(4,1);
-        }else if (key == '#') {
-          t.pulse(dosing[5].pinAddr,60000 / dosing[3].mlperminute, LOW);
+        }else if (key == '#' && PUMPCOUNTS>5) {
+          t.pulse(dosingPins[5],60000 / dosingMlMin[5], LOW);
           writeLCD(5,1);
-        } 
+        }
         break;
         
         
